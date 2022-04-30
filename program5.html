@@ -1,0 +1,114 @@
+WEEK - 4: Develop and demonstrate JavaScript with POP-UP boxes and functions for
+the following problems:
+a) Input: Click on Display Date button using onclick( ) function
+ Output: Display date in the textbox
+b) Input: A number n obtained using prompt
+ Output: Factorial of n number using alert
+c) Input: A number n obtained using prompt
+ Output: A multiplication table of numbers from 1 to 10 of n using alert
+d) Input: A number n obtained using prompt and add another number using confirm
+ Output: Sum of the entire n numbers using alert
+PROGRAM:
+a) date.html
+<html>
+<body>
+<script>
+function display(){
+var x="You have clicked";
+var d=new Date();
+var date=d.getDate();
+var month=d.getMonth();
+month++;
+var year=d.getFullYear();
+document.getElementById("dis").value=date+"/"+month+"/"+year;
+}
+</script>
+<form>
+<input type="text" id="dis" /><br />
+<input type="button" value="Display Date" onclick="display()" />
+</form>
+<body>
+</html>
+OUTPUT:
+b) factorial.html
+<html>
+<head>
+ <title>factorial</title>
+ <script language='javascript'>
+WEB TECHNOLOGIES LAB MRCET
+DEPARTMENT OF CSE Page 19
+ function factorialcalc()
+ {
+ number = parseint(prompt("enter a number, i'll calculate its factorial", "whole
+ numbers bigger than zero, please"))
+ factorial = 1
+ for (i=1; i <= number; i++)
+ {
+ factorial = factorial * i
+ }
+ alert("the factorial of " + number + " is " + factorial)
+ }
+ </script>
+ </head>
+<body><form name=frm>
+<input type=button value='factorial' onclick="factorialcalc();">
+</form>
+</body>
+</html>
+OUTPUT:
+WEB TECHNOLOGIES LAB MRCET
+DEPARTMENT OF CSE Page 20
+c) multable.html
+<html>
+ <head><title> Multiplication Table </title></head>
+ <body>
+ <script type="text/javascript">
+ <!--
+var n=prompt("Enter positive value for n: "," ");
+if(!isNaN(n)) {
+ var table="";
+ var number="";
+ for(i=1;i<=10;i++) {
+ number = n * i;
+ table += n + " * " + i + " = " + number + "\n";
+ }
+ alert(table);
+ }
+ else {
+ alert("Enter positive value");
+ n=prompt("Enter positive value for n: "," ");
+}
+document.write(n+" table values displayed using alert ..<br />");
+ // -->
+</script>
+</body>
+</html>
+OUTPUT:
+WEB TECHNOLOGIES LAB MRCET
+DEPARTMENT OF CSE Page 21
+d) sum of n numbers.html
+<html>
+ <head><title>sum of n numbers using popup boxes</title>
+ <script language='javascript'>
+function addsum()
+ {
+ alert("you're going to give me a list of numbers. i'm going to add them together for you");
+ var keepgoing = true
+ var sumofnums = 0
+ while (keepgoing) {
+ sumofnums = sumofnums + parseint(prompt("what's the next number to add?",""))
+ keepgoing = confirm("add another number?")
+ }
+alert("the sum of all your numbers is " + sumofnums)
+ }
+</script>
+</head>
+<body>
+ <form name=frm>
+ <input type=button value='sum of n numbers' onclick="addsum();">
+ </form>
+</body>
+</html>
+OUTPUT:
+EXERCISE:
+1. Write a JavaScript
